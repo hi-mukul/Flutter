@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class callBackfunction extends StatelessWidget{
+  const callBackfunction({super.key});
+
 
   callBack(){
     print('Clicked');
@@ -10,8 +11,8 @@ class callBackfunction extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       body: ElevatedButton(
-        child: Text('Click Here'),
         onPressed: callBack,
+        child: const Text('Click Here'),
       ),
     );
   }

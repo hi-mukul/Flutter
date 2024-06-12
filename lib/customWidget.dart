@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:practice/gridView.dart';
 
 class CustomWidget extends StatelessWidget{
+  const CustomWidget({super.key});
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
       body:Container(
-        child: Column(
+        child: const Column(
           children: [
             ExWidget_1(),
             ExWidget_2(),
@@ -22,6 +23,8 @@ class CustomWidget extends StatelessWidget{
 }
 
 class ExWidget_1 extends StatelessWidget{
+  const ExWidget_1({super.key});
+
   @override
 
   Widget build(BuildContext context){
@@ -29,8 +32,8 @@ class ExWidget_1 extends StatelessWidget{
       flex: 3,
       child: Container(
         color: Colors.grey,
-        child: ListView.builder(itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.all(11.0),
+        child: ListView.builder(itemBuilder: (context, index) => const Padding(
+          padding: EdgeInsets.all(11.0),
           child: SizedBox(
             width: 100,
             child: CircleAvatar(
@@ -46,6 +49,8 @@ class ExWidget_1 extends StatelessWidget{
 }
 
 class ExWidget_2 extends StatelessWidget{
+  const ExWidget_2({super.key});
+
   @override
 
   Widget build(BuildContext context){
@@ -53,8 +58,8 @@ class ExWidget_2 extends StatelessWidget{
       flex: 6,
       child: Container(
         color: Colors.cyan,
-        child: ListView.builder(itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.all(8),
+        child: ListView.builder(itemBuilder: (context, index) => const Padding(
+          padding: EdgeInsets.all(8),
           child: ListTile(
             leading: CircleAvatar(
               backgroundColor: Colors.white,
@@ -72,6 +77,8 @@ class ExWidget_2 extends StatelessWidget{
 }
 
 class ExWidget_3 extends StatelessWidget{
+  const ExWidget_3({super.key});
+
   @override
 
   Widget build(BuildContext context){
@@ -97,6 +104,8 @@ class ExWidget_3 extends StatelessWidget{
 }
 
 class ExWidget_4 extends StatelessWidget{
+  const ExWidget_4({super.key});
+
   @override
 
   Widget build(BuildContext context){
@@ -104,7 +113,7 @@ class ExWidget_4 extends StatelessWidget{
       flex: 3,
       child: Container(
         color: Colors.pinkAccent,
-        child: Grid(),
+        child: const Grid(),
       ),
     );
   }

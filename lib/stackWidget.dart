@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /*
@@ -10,10 +9,12 @@ import 'package:flutter/material.dart';
 
 
 class StackWidget extends StatelessWidget{
+  const StackWidget({super.key});
+
   @override
   Widget build( BuildContext context){
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: 400,
         width: double.infinity,
         child: Stack(

@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Grid extends StatelessWidget{
+  const Grid({super.key});
+
   @override
   Widget build(BuildContext context){
 
@@ -80,7 +81,7 @@ class Grid extends StatelessWidget{
 
           //////////////////////////////////// Grid view Builder //////////////////////
 
-          Container(
+          SizedBox(
             height: 150,
             child: GridView.builder(
                 itemBuilder: (context, index) {

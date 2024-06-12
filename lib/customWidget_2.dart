@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomWidget_2 extends StatelessWidget{
@@ -9,7 +8,7 @@ class CustomWidget_2 extends StatelessWidget{
   final TextStyle? textStyle;
   final VoidCallback? callback;
 
-  CustomWidget_2({
+  const CustomWidget_2({super.key, 
     required this.btnName,
     this.icon,
     this.bgColor = Colors.cyan,
@@ -20,16 +19,6 @@ class CustomWidget_2 extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return ElevatedButton(
-      child: icon!= null? Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          icon!,
-          SizedBox(
-            width: 15,
-          ),
-          Text(btnName, style: textStyle,)
-        ],
-      ): Text(btnName, style: textStyle,),
       onPressed: (){
         callback!();
       },
@@ -40,6 +29,16 @@ class CustomWidget_2 extends StatelessWidget{
           borderRadius: BorderRadius.circular(20)
         )
       ),
+      child: icon!= null? Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          icon!,
+          const SizedBox(
+            width: 15,
+          ),
+          Text(btnName, style: textStyle,)
+        ],
+      ): Text(btnName, style: textStyle,),
     );
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:practice/customWidget_2.dart';
-
+import 'package:practice/ConstraintBox.dart';
+import 'package:practice/SwitchingScreen.dart';
+import 'package:practice/statefulChange.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -48,49 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
 
-      body: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 50,
-                width: 200,
-                child: CustomWidget_2(btnName: 'Play', icon: Icon(Icons.play_arrow), callback: (){
-                  print('Play');
-                }, textStyle: TextStyle(fontSize:20),bgColor: Colors.cyan,
-                ),
-              ),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 50,
-                width: 200,
-                child: CustomWidget_2(btnName: 'Press', callback: (){
-                  print('Press');
-                }, textStyle: TextStyle(fontSize:20),bgColor: Colors.grey,
-                ),
-              ),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 50,
-                width: 200,
-                child: CustomWidget_2(btnName: 'Blocked', callback: (){
-                  print('Blocked');
-                }, textStyle: TextStyle(fontSize:20),bgColor: Colors.grey,icon: Icon(Icons.block),
-                ),
-              ),
-            ),
-
-
-          ],
-        ),
-      ),
+      body: SwitchingScreen(),
     );
   }
 }
